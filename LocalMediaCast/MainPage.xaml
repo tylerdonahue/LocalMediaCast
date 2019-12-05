@@ -39,7 +39,8 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" >
             <TextBlock Text="Cast photos" FontFamily="Segoe UI Semilight" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-        </StackPanel>
+            <Button Content="Copy Sample pictures" Click="CopySamplePics_Click"/>
+            </StackPanel>
         <GridView Grid.Row="3" Grid.Column="1" x:Name="PhotosGrid" Height="800" Width="Auto" ItemsSource="{Binding Source={StaticResource photosViewSource}}" ItemTemplate="{StaticResource Custom190x130ItemTemplate}" SelectionMode="Single" IsItemClickEnabled="True" ItemClick="PhotosGrid_ItemClick" HorizontalAlignment="Left" VerticalAlignment="Top"/>
     </Grid>
 </Page>

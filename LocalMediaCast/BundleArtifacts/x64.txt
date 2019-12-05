@@ -1,0 +1,2 @@
+MainPackage=C:\Users\tdonahue\source\repos\LocalMediaCast\LocalMediaCast\bin\x64\Release\LocalMediaCast_1.0.0.0_x64.msix
+SymbolPackage=C:\Users\tdonahue\source\repos\LocalMediaCast\LocalMediaCast\AppPackages\LocalMediaCast_1.0.0.0_Test\LocalMediaCast_1.0.0.0_x64.appxsym

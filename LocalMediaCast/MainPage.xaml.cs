@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Windows.ApplicationModel.Core;
 using Windows.Storage;
 using Windows.Storage.BulkAccess;
@@ -128,6 +129,28 @@ namespace LocalMediaCast
                 {
                     (projectionWindow.Content as Frame).Navigate(typeof(ProjectedPhoto), photo, new SuppressNavigationTransitionInfo());
                 });
+            }
+        }
+
+        private async void CopySamplePics_Click(object sender, RoutedEventArgs e)
+        {
+            StorageFolder newFolder;
+            try
+            {
+                newFolder = await KnownFolders.PicturesLibrary.CreateFolderAsync("BingImages", CreationCollisionOption.FailIfExists);
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+            string root = Windows.ApplicationModel.Package.Current.InstalledLocation.Path;
+            string path = root + @"\BingImages";
+            StorageFolder packageFolder = await StorageFolder.GetFolderFromPathAsync(path);
+            IReadOnlyList<StorageFile> filesInFolder = await packageFolder.GetFilesAsync();
+            foreach (var file in filesInFolder)
+            {
+                await file.CopyAsync(newFolder);
             }
         }
     }

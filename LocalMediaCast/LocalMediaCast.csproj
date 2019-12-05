@@ -18,6 +18,13 @@
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WindowsXamlEnableOverview>true</WindowsXamlEnableOverview>
     <PackageCertificateKeyFile>LocalMediaCast_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <GenerateAppInstallerFile>True</GenerateAppInstallerFile>
+    <AppxAutoIncrementPackageRevision>True</AppxAutoIncrementPackageRevision>
+    <AppxBundle>Always</AppxBundle>
+    <AppxBundlePlatforms>x86|x64|arm</AppxBundlePlatforms>
+    <AppInstallerUri>https://microsoft-my.sharepoint-df.com/:f:/p/tdonahue/EgPx44iklEJKt4wVe2PssKcB5LlydH2bSMErzzDJGBJiTw%3fe=xHbqJm</AppInstallerUri>
+    <AppInstallerUpdateFrequency>1</AppInstallerUpdateFrequency>
+    <AppInstallerCheckForUpdateFrequency>OnApplicationRun</AppInstallerCheckForUpdateFrequency>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -135,6 +142,39 @@
     <None Include="LocalMediaCast_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="BingImages\BlueMushroom_EN-US9252668987_1920x1200.jpg" />
+    <Content Include="BingImages\ChamonixClouds_EN-US7806783297_1920x1200.jpg" />
+    <Content Include="BingImages\ChurchillPB_EN-US9374200792_1920x1200.jpg" />
+    <Content Include="BingImages\DandelionXray_EN-US8764727533_1920x1200.jpg" />
+    <Content Include="BingImages\DollySods_EN-US9021857432_1920x1200.jpg" />
+    <Content Include="BingImages\FlamingoCousins_EN-US13543498875_1920x1200 %281%29.jpg" />
+    <Content Include="BingImages\FremontPeak_EN-US8617183007_1920x1200.jpg" />
+    <Content Include="BingImages\GeladaSimien_EN-US7386132793_1920x1200.jpg" />
+    <Content Include="BingImages\GrandPrismatic_EN-US10311241592_1920x1200.jpg" />
+    <Content Include="BingImages\GrevysZebra_EN-US7416197088_1920x1200.jpg" />
+    <Content Include="BingImages\KissingPandas_EN-US8854909213_1920x1200.jpg" />
+    <Content Include="BingImages\KonikHorses_EN-US10997581740_1920x1200.jpg" />
+    <Content Include="BingImages\KuhmoLapland_EN-US8543807282_1920x1200.jpg" />
+    <Content Include="BingImages\KyrgyzstanCat_EN-US10859527245_1920x1200.jpg" />
+    <Content Include="BingImages\LaplandAurora_EN-US12070884927_1920x1200.jpg" />
+    <Content Include="BingImages\LittleAuks_EN-US10291231387_1920x1200.jpg" />
+    <Content Include="BingImages\MendenhalLake_EN-US8702202262_1920x1200.jpg" />
+    <Content Include="BingImages\MineralCliffs_EN-US10636449444_1920x1200.jpg" />
+    <Content Include="BingImages\MonkeySoak_EN-US9655680148_1920x1200.jpg" />
+    <Content Include="BingImages\OxpeckerBoss_EN-US6807610910_1920x1200.jpg" />
+    <Content Include="BingImages\PineZion_EN-US12909890750_1920x1200.jpg" />
+    <Content Include="BingImages\PlayaRoja_EN-US9542724846_1920x1200.jpg" />
+    <Content Include="BingImages\PrudhoeOx_EN-US8573296927_1920x1200.jpg" />
+    <Content Include="BingImages\PrusikPeak_EN-US11656136546_1920x1200.jpg" />
+    <Content Include="BingImages\PuffinWales_EN-US12757555133_1920x1200.jpg" />
+    <Content Include="BingImages\RainbowLorikeets_EN-US9196763566_1920x1200.jpg" />
+    <Content Include="BingImages\Rapadalen_EN-US11885358150_1920x1200.jpg" />
+    <Content Include="BingImages\Rockhopper_EN-US8893810132_1920x1200.jpg" />
+    <Content Include="BingImages\RosehipRobin_EN-US10765383343_1920x1200.jpg" />
+    <Content Include="BingImages\SouthernRightFlukes_EN-US12069113412_1920x1200.jpg" />
+    <Content Include="BingImages\TurDad_EN-US11284438848_1920x1200.jpg" />
+    <Content Include="BingImages\WhalePod_EN-US8062526731_1920x1200.jpg" />
+    <Content Include="BingImages\WorldOceanDay_EN-US8399727104_1920x1200.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
