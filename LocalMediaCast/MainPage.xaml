@@ -1,0 +1,45 @@
+﻿<Page
+    x:Class="LocalMediaCast.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:LocalMediaCast"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <local:ThumbnailConverter x:Key="thumbnailConverter"/>
+        <DataTemplate x:Key="Custom190x130ItemTemplate">
+            <Grid Width="190" Height="130">
+                <Border Background="{StaticResource ListViewItemPlaceholderBackgroundThemeBrush}" Width="190" Height="130">
+                    <Image Source="{Binding Path=Thumbnail, Converter={StaticResource thumbnailConverter}}" Stretch="Uniform" />
+                </Border>
+            </Grid>
+        </DataTemplate>
+        <CollectionViewSource x:Name="photosViewSource"/>
+        <local:BooleanToVisibilityConverter x:Key="bool2vis"/>
+        <local:BooleanToVisibilityConverter x:Key="bool2visInverse" OnTrue="Collapsed" OnFalse="Visible"/>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Vertical" >
+            <TextBlock Text="Cast photos" FontFamily="Segoe UI Semilight" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+        </StackPanel>
+        <GridView Grid.Row="3" Grid.Column="1" x:Name="PhotosGrid" Height="800" Width="Auto" ItemsSource="{Binding Source={StaticResource photosViewSource}}" ItemTemplate="{StaticResource Custom190x130ItemTemplate}" SelectionMode="Single" IsItemClickEnabled="True" ItemClick="PhotosGrid_ItemClick" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+    </Grid>
+</Page>
